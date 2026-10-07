@@ -1,0 +1,12 @@
+var viewId = 'com.archimatetool.asistentediagramacion.view';
+
+try {
+    var page = workbench.getActiveWorkbenchWindow().getActivePage();
+    page.showView(viewId);
+} catch (error) {
+    window.alert(
+        'No se pudo abrir el Asistente de diagramacion. ' +
+        'Comprueba que la extension este instalada y reinicia Archi.\n\n' +
+        String(error)
+    );
+}

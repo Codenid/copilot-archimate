@@ -49,7 +49,7 @@ El ejecutor conoce unicamente la interfaz `Capability`. El enrutador ofrece al m
 ## Compilar e instalar
 
 1. Cierra Archi.
-2. Desde PowerShell, ejecuta `./build.ps1`. Si Archi esta instalado en otra carpeta, pasa su ruta: `./build.ps1 -ArchiHome 'D:\Apps\Archi'`.
+2. Desde PowerShell, ejecuta `.\build.ps1`. Si Archi esta instalado en otra carpeta, pasa su ruta: `.\build.ps1 -ArchiHome 'D:\Apps\Archi'`.
 3. Inicia Archi.
 4. Ejecuta `iniciar.ajs` desde el administrador de scripts jArchi.
 

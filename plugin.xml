@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point
+         id="capabilities"
+         name="Asistente de diagramacion - capacidades"
+         schema="schema/capabilities.exsd">
+   </extension-point>
+   <extension point="com.archimatetool.asistentediagramacion.capabilities">
+      <capability class="com.archimatetool.asistentediagramacion.CreateElementCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.MoveElementCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.ResizeElementCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.PaintElementCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.SetPropertyCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.ConnectElementsCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.AddInsideCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.EncloseElementCapability"/>
+      <capability class="com.archimatetool.asistentediagramacion.ComposeElementsCapability"/>
+   </extension>
+   <extension point="org.eclipse.ui.views">
+      <view
+            class="com.archimatetool.asistentediagramacion.AssistantView"
+            id="com.archimatetool.asistentediagramacion.view"
+            name="Asistente de diagramacion"
+            restorable="true">
+      </view>
+   </extension>
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="*">
+         <view
+               id="com.archimatetool.asistentediagramacion.view"
+               minimized="false"
+               relationship="stack"
+               relative="com.archimatetool.editor.propertiesView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+</plugin>

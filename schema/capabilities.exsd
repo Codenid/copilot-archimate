@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="com.archimatetool.asistentediagramacion" xmlns="http://www.w3.org/2001/XMLSchema">
+   <annotation>
+      <appInfo>
+         <meta.schema plugin="com.archimatetool.asistentediagramacion" id="capabilities" name="Assistant capabilities"/>
+      </appInfo>
+      <documentation>
+         Adds an independently implemented action to the diagram assistant.
+      </documentation>
+   </annotation>
+   <element name="extension">
+      <complexType>
+         <sequence>
+            <element ref="capability" minOccurs="1" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required"/>
+         <attribute name="id" type="string"/>
+         <attribute name="name" type="string"/>
+      </complexType>
+   </element>
+   <element name="capability">
+      <complexType>
+         <attribute name="class" type="string" use="required"/>
+      </complexType>
+   </element>
+   <annotation>
+      <appInfo>
+         <meta.element />
+      </appInfo>
+   </annotation>
+</schema>
